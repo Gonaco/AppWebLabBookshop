@@ -160,7 +160,8 @@ public class DBManager implements AutoCloseable {
 
 		    stmt.executeUpdate("INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"); //INSERT venta
 		    
-		    //if (changes)
+		    if (changes>0)
+		    	success=true;
 
 		} finally {
 
