@@ -189,8 +189,8 @@ public class DBManager implements AutoCloseable {
 	try(Statement stmt = connection.createStatement()){
 		String query = "SELECT id, title, isbn, year FROM BooksDB";
 		ResultSet rs = stmt.executeQuery(query);
-		Book nodo = new Book();
 		while (rs.next()){
+			Book nodo = new Book();
 			int id = rs.getInt("id");
 		    String title = rs.getString("title");
 		    String isbn = rs.getString("isbn");
